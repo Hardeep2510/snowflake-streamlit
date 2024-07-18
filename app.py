@@ -42,7 +42,7 @@ def onshowlist(filename):
     
 
 tabs=st.tabs(["Source","Graph","Dot Code"])
-filename="Data/employees.csv"
+filename="employees.csv"
 
 
 uploaded_file=st.sidebar.file_uploader(
