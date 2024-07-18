@@ -45,11 +45,11 @@ def onshowlist(filename):
 tabs=st.tabs(["Source","Graph","Dot Code"])
 filename="Data/employees.csv"
 
-st.write(st.session_state['names'])
+
 uploaded_file=st.sidebar.file_uploader(
     "Upload a csv file",type=["csv"],accept_multiple_files=False
 )
-st.write(st.session_state['names']) 
+
 if uploaded_file is not None:
     filename=StringIO(uploaded_file.getvalue().decode('utf-8'))
     file=uploaded_file.name
@@ -57,7 +57,7 @@ if uploaded_file is not None:
         filenames.append(file)
 df_orig =loadfile(filename)
 cols=list(df_orig.columns)
-st.write(st.session_state['names'])
+
 
 btn=st.sidebar.button('Show list',on_click=onshowlist,args=('industry.csv',))
 if btn:
