@@ -3,7 +3,6 @@ import urllib.parse
 import pandas as pd
 import streamlit as st
 from io import StringIO
-import ipdb
 
 
 st.title("Hierarichal Data Viewer")
